@@ -1,0 +1,20 @@
+[project]
+name = "lemmatizer"
+description = "Simple transformer-based lemmatizer"
+readme = "README.md"
+license = "MIT"
+authors = [
+    {name = "Artyom Ivanov", email = "zuodleq@gmail.com"},
+]
+dynamic = ["version"]
+dependencies = [
+    "opencorpora-tools",
+    "torch"
+]
+requires-python = ">= 3.12"
+
+[project.scripts]
+lemmatizer = "lemmatizer:cli"
+
+[tool.setuptools]
+packages = ["lemmatizer"]
